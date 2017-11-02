@@ -5,12 +5,10 @@ function solution(N) {
     let maxGap = 0;
     let currGap = 0;
     let capturing = false;
-    let str = "";
 
     while (pow >= 1) {
       if (acc + pow <= N) { // one
         acc += pow;
-        str += "1";
         if (!capturing) {
           capturing = true;
         } else {
@@ -20,7 +18,6 @@ function solution(N) {
           currGap = 0;
         }
       } else { // zero
-        str += "0";
         if (capturing) {
           currGap += 1;
         }
